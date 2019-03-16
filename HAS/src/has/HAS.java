@@ -18,11 +18,12 @@ public class HAS {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws IOException {
+        int operacion;
         Scanner entrada= new Scanner(System.in);
         
         System.out.println("\t\tMenu principal");
         System.out.println("*********************************************************");
-        System.out.println("*\t\t\t\t\t\t\t*\n*\t1.- Sintomas\t\t\t\t\t*\n*\t2.- Tratamientos\t\t\t\t*\n*\t3.- Causas Primarias\t\t\t\t*\n*\t4.- Causas Secundarias\t\t\t\t*\n*\t5.- Contraindicaciones\t\t\t\t*");
+        System.out.println("*\t\t\t\t\t\t\t*\n*\t1.- Sintomas\t\t\t\t\t*\n*\t2.- Tratamientos\t\t\t\t*\n*\t3.- Contraindicaciones\t\t\t\t*\n*\t4.- Causas Primarias\t\t\t\t*\n*\t5.- Causas Secundarias\t\t\t\t*");
         System.out.println("*\t\t\t\t\t\t\t*\n*********************************************************");
         System.out.print("=============>\t");
         int menu=entrada.nextInt();
@@ -37,18 +38,86 @@ public class HAS {
                 System.out.println("\n\t1.- INSERTAR\n\t2.- MOSTRAR");
                 System.out.println("*\t\t\t\t\t\t\t*\n*********************************************************");
                 System.out.print("=============>\t");
-                int operacion=entrada.nextInt();
+                operacion=entrada.nextInt();
                 if (operacion==1) {
                     sintoma.insertar();
                 }else
                     if (operacion==2) {
                         System.out.println("Lectura del archivo maestro:\n");
                         sintoma.leer_sintomas();
+                    }    
+                break;
+                        case 2:
+                Tratamientos tratamiento = new Tratamientos();
+                System.out.println("\tElija la operacion a realizar");
+                System.out.println("*********************************************************");
+                System.out.println("\n\t1.- INSERTAR\n\t2.- MOSTRAR");
+                System.out.println("*\t\t\t\t\t\t\t*\n*********************************************************");
+                System.out.print("=============>\t");
+                operacion=entrada.nextInt();
+                if (operacion==1) {
+                    tratamiento.insertar();
+                }else
+                    if (operacion==2) {
+                        System.out.println("Lectura del archivo maestro:\n");
+                        tratamiento.leer_sintomas();
                     }
                 break;
-            default: 
+                
+                case 3:
+                Contraindicaciones conIndicaciones = new Contraindicaciones();
+                System.out.println("\tElija la operacion a realizar");
+                System.out.println("*********************************************************");
+                System.out.println("\n\t1.- INSERTAR\n\t2.- MOSTRAR");
+                System.out.println("*\t\t\t\t\t\t\t*\n*********************************************************");
+                System.out.print("=============>\t");
+                operacion=entrada.nextInt();
+                if (operacion==1) {
+                    conIndicaciones.insertar();
+                }else
+                    if (operacion==2) {
+                        System.out.println("Lectura del archivo maestro:\n");
+                        conIndicaciones.leer_sintomas();
+                    }
+                break;
+                
+                case 4:
+                CausasPrimarias cauPrimarias = new CausasPrimarias();
+                System.out.println("\tElija la operacion a realizar");
+                System.out.println("*********************************************************");
+                System.out.println("\n\t1.- INSERTAR\n\t2.- MOSTRAR");
+                System.out.println("*\t\t\t\t\t\t\t*\n*********************************************************");
+                System.out.print("=============>\t");
+                operacion=entrada.nextInt();
+                if (operacion==1) {
+                    cauPrimarias.insertar();
+                }else
+                    if (operacion==2) {
+                        System.out.println("Lectura del archivo maestro:\n");
+                        cauPrimarias.leer_sintomas();
+                    }
+                break;
+                
+                case 5:
+                CausasSecundarias cauSecundarias = new CausasSecundarias();
+                System.out.println("\tElija la operacion a realizar");
+                System.out.println("*********************************************************");
+                System.out.println("\n\t1.- INSERTAR\n\t2.- MOSTRAR");
+                System.out.println("*\t\t\t\t\t\t\t*\n*********************************************************");
+                System.out.print("=============>\t");
+                operacion=entrada.nextInt();
+                if (operacion==1) {
+                    cauSecundarias.insertar();
+                }else
+                    if (operacion==2) {
+                        System.out.println("Lectura del archivo maestro:\n");
+                        cauSecundarias.leer_sintomas();
+                    }
+                break;
+            default:
+                
         }
-        System.out.println("*********************************************************");
+        System.out.println("**********************");
         
         
         
@@ -59,8 +128,11 @@ public class HAS {
         tratamiento.buscar();
         tratamiento.getLlave();*/
         
-        Contraindicaciones contraindicacion = new Contraindicaciones();
+       Contraindicaciones conIndicaciones = new Contraindicaciones();
+
 //        contraindicacion.buscar(farmaco);
+
+        CausasPrimarias cauprima = new CausasPrimarias();
     }
     
 }
