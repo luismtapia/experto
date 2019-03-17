@@ -17,7 +17,12 @@ public class HAS {
     /**
      * @param args the command line arguments
      */
+    
     public static void main(String[] args) throws IOException {
+        MENU_principal ventana_principal= new MENU_principal();
+        ventana_principal.setVisible(true);
+        
+        
         int operacion;
         Scanner entrada= new Scanner(System.in);
         
