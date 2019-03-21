@@ -63,8 +63,9 @@ public class CausasPrimarias {
         archivo.close();
     }
     
-    public void leer_sintomas() throws FileNotFoundException, IOException{
+    public void leer_causas_primarias() throws FileNotFoundException, IOException{
         long ap_actual, ap_final;
+        
         
         RandomAccessFile leer_archivo= new RandomAccessFile("CausasPrimarias", "r");
         while ((ap_actual=leer_archivo.getFilePointer())!=(ap_final=leer_archivo.length())) {            

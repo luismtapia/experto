@@ -19,10 +19,23 @@ public class HAS {
      */
     
     public static void main(String[] args) throws IOException {
-        MENU_principal ventana_principal= new MENU_principal();
-        ventana_principal.setVisible(true);
+//        MENU_principal ventana_principal= new MENU_principal();
+//        ventana_principal.setVisible(true);
+        Archivo arc=new Archivo();
+        //arc.crear_archivo();
+        arc.insertar_registro("sintomas");
+        arc.consultar_archivo_indice_secuencial();
+        System.out.println("*********");
+        //arc.consultar_archivo_maestro_secuencial();
         
         
+        
+        
+        
+        
+        
+        
+        /*
         int operacion;
         Scanner entrada= new Scanner(System.in);
         
@@ -129,15 +142,15 @@ public class HAS {
         
         
         Tratamientos tratamiento = new Tratamientos();
-        /*tratamiento.insertar();
+        tratamiento.insertar();
         tratamiento.buscar();
-        tratamiento.getLlave();*/
+        tratamiento.getLlave();
         
        Contraindicaciones conIndicaciones = new Contraindicaciones();
 
 //        contraindicacion.buscar(farmaco);
 
-        CausasPrimarias cauprima = new CausasPrimarias();
+        CausasPrimarias cauprima = new CausasPrimarias();*/
     }
     
 }
