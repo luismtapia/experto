@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package has;
 
 import java.io.IOException;
@@ -19,13 +14,16 @@ public class HAS {
      */
     
     public static void main(String[] args) throws IOException {
-//        MENU_principal ventana_principal= new MENU_principal();
-//        ventana_principal.setVisible(true);
+        Ventana_Inicio ventana_principal= new Ventana_Inicio();
+        ventana_principal.setVisible(true);
         Archivo arc=new Archivo();
         //arc.crear_archivo();
-        arc.insertar_registro("sintomas");
+        //arc.insertar_registro("sintomas");
+        
+        //System.out.println("secuencial indice");
         arc.consultar_archivo_indice_secuencial();
-        System.out.println("*********");
+        //System.out.println("*********");
+        //System.out.println("secuencial maestro");
         //arc.consultar_archivo_maestro_secuencial();
         
         
